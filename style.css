@@ -1,0 +1,379 @@
+
+/* universal */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+
+
+
+
+
+
+
+/* Navbar */
+.navbar {
+    background-color: #1e3a8a;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;   /* Fixed height */
+    padding: 0 65px;  /* Horizontal padding (adjust as needed) */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Logo container */
+.logo {
+    display: flex;
+    align-items: center;  /* Vertically center the image */
+    justify-content: center; /* Horizontally center if needed */
+    height: 10%;
+}
+
+/* Image inside logo */
+.logo img {
+    width: 60px;  /* Adjust width of image */
+    height: 50px;   /* Make the height match the navbar's height */
+    object-fit: contain; /* Make sure the aspect ratio is maintained */
+    margin-right: 0;  /* Remove any extra margin */
+}
+
+        
+
+        .logo:hover {
+            background-color: #162d6b;
+            letter-spacing: 1px;
+        }
+
+
+
+        .nav-links {
+            display: flex;
+            height: 100%;
+        }
+
+        .nav-links a {
+            display: flex;
+            align-items: center;   /* Vertically center text */
+            padding: 0 25px;       /* Horizontal spacing */
+            color: white;
+            text-decoration: none;
+            height: 100%;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            background-color: #162d6b;
+        }
+
+        /* Dropdown Style */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown button {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      padding: 0 25px;  /* Match navbar link padding */
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.3s ease;
+    }
+
+    .dropdown button::after {
+      content: " ▼"; /* Downward arrow */
+      font-size: 12px;
+      margin-left: 5px;
+    }
+
+    .dropdown button:hover {
+      background-color: #162d6b; /* Match hover effect */
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      top: 100%; /* Position directly below the button */
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #162d6b;
+      color: white;
+    }
+
+
+
+
+
+.home-section {
+    padding: 80px 60px;
+}
+
+.home-section.grey {
+    background-color: white;
+}
+
+.section-subtitle{
+    text-align: center;
+}
+
+.section-title {
+    font-size: 28px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.section-subtitle {
+    margin-bottom: 40px;
+    color: #666;
+}
+
+/* GRID SYSTEM */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+/* CARD STYLE */
+.card-box {
+    background: rgb(236, 236, 236);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.card-box:hover {
+    transform: translateY(-5px);
+    outline: 1px solid #1e3a8a;
+}
+
+.card-box h3 {
+    margin-bottom: 10px;
+}
+
+.card-box p {
+    color: #555;
+    margin-bottom: 15px;
+}
+
+
+
+.card-box a {
+    text-decoration: none;
+    color: #1e3a8a;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+/* ========================= */
+/* ABOUT PREVIEW SECTION */
+/* ========================= */
+
+.about-preview {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 80px 10%;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+/* Image Styling */
+.about-image {
+    position: relative;
+    flex: 1 1 300px;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 30px 60px rgba(53, 53, 53, 0.895);
+    transform: rotate(-5deg);
+    transition: 0.5s ease;
+}
+
+/* 3D Floating Effect */
+.about-image::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 100%;
+    height: 100%;
+    border: 3px solid #ffffffa2;
+    border-radius: 10px;
+    z-index: -1;
+    transform: rotate(-5deg);
+}
+
+/* Hover effect */
+.about-image img:hover {
+    transform: rotate(0deg) scale(1.05);
+}
+
+/* Text Styling */
+.about-content {
+    flex: 1 1 450px;
+    color: white;
+}
+
+.about-content h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #e0e0e0;
+}
+
+/* Button */
+.about-btn {
+    padding: 12px 30px;
+    background-color: #ffffff;
+    color: black;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.about-btn:hover {
+    background-color: #1e3a8a;
+    color: white;
+}
+
+
+
+
+
+/* button */
+
+/* Center Section */
+.home-buttons {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px; /* wider horizontal spacing */
+}
+
+/* Button Style */
+.main-btn {
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    padding: 20px 80px; /* bigger button */
+    border: 0.5px solid black; /* black outline */
+    border-radius: 50px; /* soft rounded rectangle */
+    font-size: 20px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+/* Hover Effect */
+.main-btn:hover {
+    background-color: #1e3a8a;
+    color: white;
+    transform: translateY(-6px);
+}
+
+
+
+
+/* Footer */
+.footer {
+    background-color: #1e3a8a;
+    color: white;
+    padding: 50px 80px 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer-section h3 {
+    margin-bottom: 15px;
+}
+
+.footer-logo {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.footer-section p {
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.footer-bottom {
+    border-top: 1px solid #333;
+    margin-top: 40px;
+    padding-top: 15px;
+    text-align: center;
+    font-size: 13px;
+    color: #aaa;
+}
